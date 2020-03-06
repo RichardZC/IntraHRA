@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Hra.Intra.DA.Telefono>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Piso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bloque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ambiente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anexo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Piso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bloque)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ambiente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Anexo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<div style="bottom: 50px; right: 19px;" class="fixed-action-btn direction-top">
+    <a href="@Url.Action("Create","Telefono")" class="btn-floating btn-large gradient-45deg-light-blue-cyan gradient-shadow"><i class="material-icons">add</i></a>
+    
+</div>
