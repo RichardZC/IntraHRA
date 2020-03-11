@@ -24,6 +24,8 @@ namespace Hra.Intra.DA
         {
             throw new UnintentionalCodeFirstException();
         }
+
+
     
         public virtual DbSet<Telefono> Telefono { get; set; }
     }
