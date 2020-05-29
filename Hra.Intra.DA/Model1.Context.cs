@@ -26,5 +26,6 @@ namespace Hra.Intra.DA
         }
     
         public virtual DbSet<Telefono> Telefono { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }
