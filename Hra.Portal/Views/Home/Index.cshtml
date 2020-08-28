@@ -33,23 +33,36 @@
                 <nav>
                     <ul>
                         @*<li><a href="@Url.Action("Index","Home")" class="icon solid fa-network-wired" target="_blank"></a></li>*@
-                        <li><a href="http://glpi.hrayacucho.gob.pe/glpi/" class="icon solid fa-laptop-code" target="_blank"></a></li>
                         <li><a href="https://passport.yandex.com/auth?from=mail&origin=hostroot_homer_auth_com&retpath=https%3A%2F%2Fmail.yandex.com" class="icon solid fa-envelope" target="_blank"></a></li>
                         <li><a href="http://hrayacucho.workplace.com/" class="icon solid fa-comments" target="_blank"></a></li>
+                        <li><a href="http://glpi.hrayacucho.gob.pe/glpi/" class="icon solid fa-laptop-code" target="_blank"></a></li>
                         <li><a href="http://repositorio.hrayacucho.gob.pe:8080/share" class="icon solid fa-folder-open" target="_blank"></a></li>
                         <li><a href="@Url.Action("Anexo","Home")" class="icon solid fa-phone" target="_blank"></a></li>
                         <li><a href="@Url.Action("Directorio","Home")" class="icon solid fa-user-friends" target="_blank"></a></li>
                     </ul>
                     <ul id="cust">
                         @*<li>Intranet</li>*@
-                        <li>Soporte</li>
-                        <li>Email</li>
+                        <li>Correo</li>
                         <li>Chat</li>
+                        <li>Soporte</li>
                         <li>Repositorio</li>
                         <li>Anexos</li>
                         <li>Directorio</li>
                     </ul>
-                    <label style="font-size:40px;position: absolute;right: 0px;top: -120px;z-index: 1;">@Request.ServerVariables["REMOTE_ADDR"];</label>
+                    <label style="font-size:40px;position: absolute;right: 0px;top: -120px;z-index: 1;">
+                        @if (!string.IsNullOrEmpty(Request.ServerVariables["HTTP_CLIENT_IP"]))
+                        {
+                            @Request.ServerVariables["HTTP_CLIENT_IP"];
+                        }
+                        else if (!string.IsNullOrEmpty(Request.ServerVariables["HTTP_X_FORWARDED_FOR"]))
+                        {
+                            @Request.ServerVariables["HTTP_X_FORWARDED_FOR"]
+                        }
+                        else 
+                        {
+                            @Request.ServerVariables["REMOTE_ADDR"]
+                        }
+                    </label>
 
                 </nav>
                 
