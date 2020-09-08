@@ -1,0 +1,71 @@
+﻿@using Hra.Intra.Web.Clases
+@model List<PacientesGalen>
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<div class="row">
+        <div class="col md-6">
+            <h4>Lista de Historia Actualizadas</h4>
+            <label>Ingrese fecha :</label>
+            <input type="text" id="txtfecha" placeholder="Ingrese la Historia Clinica y Presione Enter" />
+            <input type="button" id="btnBuscar2" value="Buscar" class="btn btn-primary" />
+            <br />
+            <div id="fecha">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    @section  scripts{
+        <script src="~/Scripts/PacienteHistoria.js"></script>
+        <script>
+                    $(document).ready(function () {
+                        $("#txtfecha").keypress(function (e) {
+                            if (e.which == 13) {
+                                BuscarFecha($("#txtfecha").val());
+                            }
+                        });
+                    });
+
+        </script>
+    }*@
+
+@using (Html.BeginForm("MostrarHistorias", "Fecha", FormMethod.Post))
+{
+    @Html.Label("Ingrese fecha")
+    @Html.TextBox("fechaUltimoCambioHistoria")
+    <input type="submit" class="btn btn-succes" value="Enviar" />
+    
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                @*<td>@Html.LabelFor(p => Model[0].NOMBRE)</td>*@
+                <td>@Html.LabelFor(p => Model[0].NACIDO)</td>
+                <td>@Html.LabelFor(p => Model[0].DNI)</td>
+                <td>@Html.LabelFor(p => Model[0].HC)</td>
+                <td>@Html.LabelFor(p => Model[0].SEXO)</td>
+                <td>@Html.LabelFor(p => Model[0].MODICIACION)</td>
+                <td>@Html.LabelFor(p => Model[0].HANTERIOR)</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>@item.NOMBRE</td>*@
+                    <td>@item.NACIDO</td>
+                    <td>@item.DNI</td>
+                    <td>@item.HC</td>
+                    <td>@item.SEXO</td>
+                    <td>@item.MODICIACION</td>
+                    <td>@item.HANTERIOR</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

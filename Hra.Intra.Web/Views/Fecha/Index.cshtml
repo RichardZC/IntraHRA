@@ -1,0 +1,28 @@
+﻿@model List<Hra.Intra.sigh.usp_DniListarNroHistoria_Result>
+
+
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <td>IdPaciente</td>
+                <td>Dni</td>
+                <td>Paciente</td>
+                <td>NroHistoriaClinica</td>
+                <td>HistoriaSistemaAnterior</td>
+                <td>FechaCambio</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.IdPaciente</td>
+                    <td>@item.Dni</td>
+                    <td>@item.Paciente</td>
+                    <td>@item.NroHistoriaClinica</td>
+                    <td>@item.HistoriaSistemaAnterior</td>
+                    <td>@item.FechaCambio</td>
+                </tr>
+            }
+        </tbody>
+    </table>

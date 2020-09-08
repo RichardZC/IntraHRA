@@ -60,7 +60,18 @@
                     <span class="menu-title" data-i18n="">Anexos</span>
                 </a>
             </li>
-
+            <li class="bold">
+                <a class="waves-effect waves-cyan " href="@Url.Action("Index","Historia")">
+                    <i class="material-icons">image_aspect_ratio</i>
+                    <span class="menu-title" data-i18n="">Historia Clínica</span>
+                </a>
+            </li>
+            <li class="bold">
+                <a class="waves-effect waves-cyan " href="@Url.Action("MostrarHistorias","Fecha")">
+                    <i class="material-icons">image_aspect_ratio</i>
+                    <span class="menu-title" data-i18n="">Reporte Diaria</span>
+                </a>
+            </li>
             @*@foreach (var item in menu)
         {
             <li class="bold">
@@ -84,8 +95,9 @@
             <div class="container"><span>Todos los Derechos Reservados </span><span class="right hide-on-small-only"><a href="https://codeaperu.com">@empresa</a></span></div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    @*<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>*@
     <script src="~/app-assets/js/vendors.min.js" type="text/javascript"></script>
     <script src="~/app-assets/vendors/jquery-validation/jquery.validate.min.js"></script>
     <script src="~/app-assets/js/plugins.min.js" type="text/javascript"></script>

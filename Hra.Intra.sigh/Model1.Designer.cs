@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'F:\GITHUB\IntraHRA\Hra.Intra.sigh\Modelsigh.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'D:\Desarrollo_2020\Archivos_HRA_2020\IntraHRA\Hra.Intra.sigh\Model1.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

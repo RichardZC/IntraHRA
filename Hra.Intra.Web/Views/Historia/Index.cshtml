@@ -1,0 +1,65 @@
+﻿<div class="row">
+    <div class="col md-6">
+        <h4>Historias Clinicas</h4>
+        <input type="text" id="txtHIstoriaC" placeholder="Ingrese la Historia Clinica y Presione Enter" />
+        <input type="button" id="btnBuscar" value="Buscar" class="btn btn-primary" />
+
+        <br />
+        <br />
+        <br />
+        <div id="tabla">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col md-6">
+            <h4>DNI en Reniec</h4>
+            <input type="text" id="txtDNI" placeholder="Ingrese DNI y Presione Enter" />
+            <div id="dni">
+
+            </div>
+            <br />
+            <input type="button" id="btnActualizar" value="Editar" class="btn btn-primary"  />
+        </div>
+
+    </div>
+</div>
+
+@section  scripts{
+    <script src="~/Scripts/PacienteHistoria.js"></script>
+    <script>
+        var pacienteId;
+        var personaReniec;
+        $(document).ready(function () {
+            $("#txtDNI").keypress(function (e) {
+                if (e.which == 13) {
+                    BuscarPaciente($("#txtDNI").val());
+                }
+            });
+            $("#txtHIstoriaC").keypress(function (e) {
+                if (e.which == 13) {
+                    BuscarHistoria($("#txtHIstoriaC").val());
+                }
+            });
+
+            $("#btnActualizar").click(function (e) {
+                console.log($.data(document.body, 'pacienteId'));
+                console.log($.data(document.body, 'personaReniec'));
+                 @*$.ajax({
+                    type: 'POST',
+                    url: "@Url.Action("Editar", "Historia")",
+                    data: {
+                        pacienteId: $.data(document.body, 'pacienteId'),
+                        persona:  $.data(document.body, 'personaReniec') 
+                    },
+                    success: function (res) {
+                        //limpiar
+                        //muestrar mensaje
+                    }
+                });*@
+            });
+        });
+    </script>
+
+}
