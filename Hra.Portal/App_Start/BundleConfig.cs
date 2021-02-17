@@ -19,12 +19,12 @@ namespace Hra.Portal
             //bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
             //            "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+            //          "~/Scripts/bootstrap.js"));
 
-            bundles.Add(new StyleBundle("~/assets/css").Include(
-                      "~/anexos/css/bootstrap.min.css",
-                      "~/assets/css/main1.css"));
+            //bundles.Add(new StyleBundle("~/assets/css").Include(
+            //          "~/anexos/css/bootstrap.min.css",
+            //          "~/assets/css/main1.css"));
         }
     }
 }
