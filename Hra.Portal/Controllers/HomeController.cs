@@ -45,5 +45,9 @@ namespace Hra.Portal.Controllers
         {
             return View();
         }
+        public ActionResult Formatos()
+        {
+            return View();
+        }
     }
 }

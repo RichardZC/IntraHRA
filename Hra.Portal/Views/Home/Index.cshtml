@@ -36,18 +36,24 @@
                         <li><a href="https://passport.yandex.com/auth?from=mail&origin=hostroot_homer_auth_com&retpath=https%3A%2F%2Fmail.yandex.com" class="icon solid fa-envelope" target="_blank"></a></li>
                         <li><a href="http://hrayacucho.workplace.com/" class="icon solid fa-comments" target="_blank"></a></li>
                         <li><a href="http://glpi.hrayacucho.gob.pe/glpi/" class="icon solid fa-laptop-code" target="_blank"></a></li>
-                        <li><a href="http://repositorio.hrayacucho.gob.pe:8080/share" class="icon solid fa-folder-open" target="_blank"></a></li>
+                        @*<li><a href="http://repositorio.hrayacucho.gob.pe:8080/share" class="icon solid fa-folder-open" target="_blank"></a></li>*@
+                        <li><a href="https://perifoneo.hrayacucho.gob.pe:8088/" class="icon solid fa-microphone-alt" target="_blank"></a></li>
                         <li><a href="@Url.Action("Anexo","Home")" class="icon solid fa-phone" target="_blank"></a></li>
                         <li><a href="@Url.Action("Directorio","Home")" class="icon solid fa-user-friends" target="_blank"></a></li>
+                        <li><a href="https://u.pcloud.link/publink/show?code=kZH5NhXZOUoamvSCTu8vXhVbN1nUU8IhCRLV" class="icon solid fa-book" target="_blank"></a></li>
+                        <li><a href="@Url.Action("Formatos","Home")" class="icon solid fa-file" target="_blank"></a></li>
                     </ul>
                     <ul id="cust">
                         @*<li>Intranet</li>*@
                         <li>Correo</li>
                         <li>Chat</li>
                         <li>Soporte</li>
-                        <li>Repositorio</li>
+                        @*<li>Repositorio</li>*@
+                        <li>Perifoneo</li>
                         <li>Anexos</li>
                         <li>Directorio</li>
+                        <li>Manuales</li>
+                        <li>Solicitudes</li>
                     </ul>
                     <label style="font-size:40px;position: absolute;right: 0px;top: -120px;z-index: 1;">
                         @if (!string.IsNullOrEmpty(Request.ServerVariables["HTTP_CLIENT_IP"]))
@@ -93,8 +99,8 @@
                             <img src="~/img/c7.jpeg" class="d-block w-100 " style="height:410px" alt="...">
                         </div>*@
                         <div class="carousel-item active">
-                            <a href="~/img/c8.jpg" target="_blank">
-                                <img src="~/img/c8.jpg" class="d-block w-50 mx-auto " style="height:450px" alt="...">
+                            <a href="https://filedn.com/lcwzgzS7h6e5GQ7lau75piL/PORTAL_DE_TRANSPARENCIA/2020_2021/Instrumentos_de_Gestion/Directiva_00_2020_correoElectronico_HRA.pdf" target="_blank">
+                                <img src="~/img/c27.jpg" class="d-block w-100 mx-auto " style="height:auto" alt="...">
                             </a>
                         </div>
                         @*

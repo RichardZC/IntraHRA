@@ -161,6 +161,8 @@
     <Content Include="assets\css\images\overlay.svg" />
     <Content Include="assets\css\main1.css" />
     <Content Include="assets\css\noscript.css" />
+    <Content Include="assets\img\pdf1.png" />
+    <Content Include="assets\img\word1.png" />
     <Content Include="assets\jquery-3.4.1.slim.min.js" />
     <Content Include="assets\webfonts\fa-brands-400.svg" />
     <Content Include="assets\webfonts\fa-regular-400.svg" />
@@ -192,6 +194,7 @@
     <Content Include="assets\webfonts\fa-solid-900.woff2" />
     <Content Include="img\c1.jfif" />
     <Content Include="img\c2.jfif" />
+    <Content Include="img\c27.jpg" />
     <Content Include="img\c3.jfif" />
     <Content Include="img\c4.jpeg" />
     <Content Include="img\c5.jpg" />
@@ -218,10 +221,18 @@
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="formatos\camaras_ejemplo.pdf" />
+    <Content Include="formatos\camaras_formato.docx" />
+    <Content Include="formatos\siaf_formato.docx" />
+    <Content Include="formatos\siga_formato.docx" />
+    <Content Include="formatos\sisgalenplus_formato.doc" />
+    <Content Include="formatos\wifi_ejemplo.pdf" />
+    <Content Include="formatos\wifi_formato.docx" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Views\Home\Citas.cshtml" />
     <Content Include="Views\Home\Directorio.cshtml" />
+    <Content Include="Views\Home\Formatos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hra.Intra.DA\Hra.Intra.DA.csproj">
